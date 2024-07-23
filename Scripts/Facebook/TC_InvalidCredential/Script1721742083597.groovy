@@ -23,9 +23,15 @@ WebUI.maximizeWindow()
 
 WebUI.navigateToUrl('https://web.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=120&lwc=1348028')
 
-WebUI.click(findTestObject('OR_Facebook/OR_Login/button_Log in'))
+WebUI.setText(findTestObject('Object Repository/OR_Facebook/OR_InvalidCredentials/input_Log in to Facebook_email'), 
+    'reyhan@gmail.com')
 
-WebUI.verifyElementText(findTestObject('OR_Facebook/OR_SkipField/Alert'), 'The email address or mobile number you entered isn\'t connected to an account. Find your account and log in.')
+WebUI.setEncryptedText(findTestObject('Object Repository/OR_Facebook/OR_InvalidCredentials/input_Log in to Facebook_pass'), 
+    'hUKwJTbofgPskEWN4pMTBw==')
+
+WebUI.click(findTestObject('Object Repository/OR_Facebook/OR_Login/button_Log in'))
+
+WebUI.verifyTextPresent('The password you\'ve entered is incorrect.', false)
 
 WebUI.closeBrowser()
 
