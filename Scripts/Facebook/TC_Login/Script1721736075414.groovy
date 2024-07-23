@@ -17,3 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.openBrowser('')
+
+WebUI.maximizeWindow()
+
+WebUI.navigateToUrl('https://web.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=120&lwc=1348028')
+
+WebUI.sendKeys(findTestObject('OR_Login/Email'), 'hannywestlife@gmail.co.id')
+
+WebUI.sendKeys(findTestObject('OR_Login/Password'), 'latihan')
+
+WebUI.click(findTestObject('OR_Login/button_Log in'))
+
+WebUI.delay(1)
+
+WebUI.closeBrowser()
+
