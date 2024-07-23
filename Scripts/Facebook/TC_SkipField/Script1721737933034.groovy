@@ -23,13 +23,15 @@ WebUI.maximizeWindow()
 
 WebUI.navigateToUrl('https://web.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=120&lwc=1348028')
 
-WebUI.sendKeys(findTestObject('OR_Login/Email'), 'hannywestlife@gmail.co.id')
+WebUI.clearText(findTestObject('OR_Login/Email'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.sendKeys(findTestObject('OR_Login/Password'), '')
+WebUI.clearText(findTestObject('OR_Login/Password'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('OR_Login/button_Log in'))
 
-WebUI.verifyAlertPresent(0)
+WebUI.verifyAlertPresent(variable)
+
+WebUI.delay(1)
 
 WebUI.closeBrowser()
 

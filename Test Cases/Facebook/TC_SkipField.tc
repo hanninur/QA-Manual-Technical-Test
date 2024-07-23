@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_SkipField</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a26c7fb5-a5b3-4e54-aaf3-d5f86a6329cb</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>0b483f58-e3b3-4d3a-81cc-c69e761f1111</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'The email address or mobile number you entered isn\'t connected to an account.'</defaultValue>
+      <description></description>
+      <id>0b483f58-e3b3-4d3a-81cc-c69e761f1111</id>
+      <masked>false</masked>
+      <name>variable</name>
+   </variable>
+</TestCaseEntity>
